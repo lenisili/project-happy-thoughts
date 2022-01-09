@@ -5,9 +5,187 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.body{
+  width: 100%; 
+}
+
+.date {
+  font-style: italic;
+  display: inline;
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #dcdcdc;
+  border-radius: 50%;
+  border-left: 5px solid #fff;
+  animation: spinner infinite 0.5s;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate (360deg);
+  }
+}
+
+h1 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 60px;
+  font-weight: 700;
+  text-shadow: 3px 3px 3px #FDAEAD;
+  text-align: center;
+  margin: 30px;
+  color:white;
+}
+
+.form-container{
+  width: 80%;
+  margin: 40px auto;
+  border: 1px solid black;
+  box-shadow: 10px 10px black;
+  display: flex;
+  flex-direction: column;
+  background-color: #F3F0F0;
+
+}
+.message-container{
+  width: 400px;
+  margin: 40px auto;
+  border: 1px solid black;
+  box-shadow: 10px 10px black;
+  background-color: white;
+}
+
+.label-form {
+  margin: 25px 0 15px 25px;
+  font-weight: 600;
+}
+
+.thought-input {
+  border: 1px solid #D5D2D2;
+  margin: 0 auto;
+  width: 90%;
+  height: 70px;
+  font-family: 'Roboto Mono', monospace;
+  padding: 10px;
+}
+
+.button-count{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.submit-button {
+  width: 50%;
+  height: 60px;
+  min-width: 250px;
+  margin: 10px auto 5px 25px;
+  border-radius: 40px;
+  background-color: #FDAEAD;
+  border:none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  transform:scale(1.1,1.1);
+}
+
+.character-count {
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+}
+
+.error-message {
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+}
+
+.thought-message {
+  margin: 70px 35px;
+  font-size: 20px;
+  line-height: 25px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  overflow-wrap: break-word;
+}
+
+.thought-container {
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	row-gap: 20px;
+	border: solid black 1px;
+	padding: 15px;
+	margin: 25px auto;
+	box-shadow: 10px 10px;
+	max-width: 75%;
+}
+
+.thought-message {
+	width: 100%;
+}
+
+.thought-message p {
+	overflow-wrap: break-word;
+}
+
+.heart-date-container {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	width: 100%;
+	color: #949494;
+}
+
+.heart-btn {
+	border-radius: 50%;
+	padding: 13px;
+	background: #ffadad;
+	border: none;
+	margin-right: 5px;
+	transition: all 0.2s ease-in-out;
+}
+
+.heart-btn:hover {
+	transform: scale(1.1);
+}
+
+.date {
+	color: #949494;
+	display: flex;
+	align-items: center;
 }
